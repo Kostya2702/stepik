@@ -56,23 +56,23 @@ import threading
 #     conn.close()
 
 
-def mess():
-    while True:
-        data = conn.recv(1024)
-        if not data:
-            break
-    conn.close()
-
-
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(('0.0.0.0', 2222))
-s.listen(10)
-print('Server started! Please waiting for connection')
-
-conn, addr = s.accept()
-print('Connection ', addr)
-t = threading.Thread(target=mess, args=(conn, addr))
-t.start()
+# def mess():
+#     while True:
+#         data = conn.recv(1024)
+#         if not data:
+#             break
+#     conn.close()
+#
+#
+# s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# s.bind(('0.0.0.0', 2222))
+# s.listen(10)
+# print('Server started! Please waiting for connection')
+#
+# conn, addr = s.accept()
+# print('Connection ', addr)
+# t = threading.Thread(target=mess, args=(conn, addr))
+# t.start()
 
 
 
