@@ -30,8 +30,8 @@
 
 # Вторая задача 1.7
 
-import socket
-import threading
+# import socket
+# import threading
 
 # # Определение сокета и установка адреса
 # s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -74,6 +74,10 @@ import threading
 # t = threading.Thread(target=mess, args=(conn, addr))
 # t.start()
 
+import re
 
+pattern = r'/(img+|css+|js+)/.*\..*'
+strs = '123123123qweadas/img/1jpeg'
+print(re.findall(pattern, strs))
 
 
